@@ -1,9 +1,55 @@
 <html>
-  <head>
-    <title>Video Streaming Demonstration</title>
-  </head>
-  <body>
-    <h1>Video Streaming Demonstration</h1>
-    <img src="{{ url_for('video_feed') }}">
-  </body>
+
+<head>
+  <title>Video Streaming Demonstration</title>
+  <style>
+    @font-face {
+      font-family: 'CustomFont';
+      src: url('./chalk.ttf') format('truetype');
+    }
+    body {
+  font-family: 'CustomFont', Arial, sans-serif;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="container" style="
+      overflow-x: hidden;
+      overflow-y: hidden;
+      background-repeat:no-repeat ;
+      background-size: cover;
+      background: url('https://wallpapercave.com/wp/wp4724164.png');
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      height: 100vh;
+      width: 100vw;
+
+      ">
+    <h1 style="
+      color: white;
+      
+      ">Video Streaming Demonstration</h1>
+    <img style="
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 800px;
+
+    " src="{{ url_for('video_feed',camera=0) }}">
+    <img style="
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 800px;
+
+    " src="{{ url_for('video_feed2',camera=0) }}">
+   
+    
+  </div>
+
+</body>
+
 </html>

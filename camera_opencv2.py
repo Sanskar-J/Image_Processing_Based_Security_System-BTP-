@@ -18,14 +18,14 @@ import cloudinary.uploader
 
 
 
-class Camera(BaseCamera):
+class Camera2(BaseCamera):
     
-    # video_source = r'C:\Users\Sanskar\Desktop\hmara btp\test.mp4'
-    video_source = 0
+    video_source = r'C:\Users\Sanskar\Desktop\hmara btp\test.mp4'
+    # video_source = 0
 
     @staticmethod
     def set_video_source(source):
-        Camera.video_source = source
+        Camera2.video_source = source
     
     
     @staticmethod
@@ -46,7 +46,7 @@ class Camera(BaseCamera):
         net.setInputSwapRB(True)
 
 
-        camera = cv2.VideoCapture(Camera.video_source)
+        camera = cv2.VideoCapture(Camera2.video_source)
         camera.set(3,1280)
         camera.set(4,720)
         camera.set(10,70)
