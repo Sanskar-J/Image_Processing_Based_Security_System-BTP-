@@ -20,9 +20,8 @@ import cloudinary.uploader
 
 class Camera2(BaseCamera):
     
-    video_source = r'C:\Users\Sanskar\Desktop\hmara btp\test.mp4'
-    # video_source = 0
-
+    # video_source = r'C:\Users\Sanskar\Desktop\hmara btp\test.mp4'
+    video_source='http://192.168.1.25:4747/video'
     @staticmethod
     def set_video_source(source):
         Camera2.video_source = source

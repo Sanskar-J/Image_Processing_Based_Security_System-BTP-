@@ -7,7 +7,7 @@ from flask import Flask, render_template, Response
 # if os.environ.get('CAMERA'):
     # Camera = import_module('camera_' + os.environ['CAMERA']).Camera
 # print(os.environ['CAMERA'])
-Camera = import_module('camera_opencv').Camera
+Camera = import_module('camera_opencv2').Camera2
 # Camera2=import_module('camera_opencv').Camera
 # Camera2.set_video_source(0)
 
@@ -43,4 +43,4 @@ def video_feed():
 
 
 if __name__ == '__main__':
-    app.run(port=5001,host='0.0.0.0', threaded=True)
+    app.run(host='0.0.0.0', threaded=True)
